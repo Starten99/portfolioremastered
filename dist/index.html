@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="JS Practica"> 
+    <meta name="author" content="Аleksey-Starten"> 
+    <link rel="icon" href="./img/logo.ico" type="image/x-icon">
+    <title>Starten</title>
+<link href="style.min.css" rel="stylesheet"></head>
+<body>
+    <div class="page">
+        <header id="header">
+            <div class="container">
+                <nav class="navbar">
+                    <div class="navbar__header">
+                        <div class="navbar__logo"><img src="./img/logo.svg" alt="logo"></div>
+                    </div>
+                    <ul class="navbar__menu">
+                        <li class="navbar__menu-item">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="navbar__menu-item">
+                            <a href="#">Услуги</a>
+                        </li>
+                        <li class="navbar__menu-item">
+                            <a href="#">Галерея</a>
+                        </li>
+                        <li class="navbar__menu-item">
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <button class="navbar__btn-bars" id="open-navbar__menu"><i class="fas fa-bars"></i></button> 
+                    <div class="navbar__close">
+                        <i class="fas fa-times"></i>
+                    </div>  
+                </nav>
+            </div>
+        </header>
+        <main id="main">
+            <section class="header" id="main__header">
+                <div class="header__cover"></div>
+                <div class="container">
+                    <div class="header__content">
+                        <div class="header__title">
+                            <h1>Aleksey Zaravnyatnykh</h1>
+                        </div>
+                        <div class="header__subtitle">
+                            <h3>Frontend developer</h3>
+                        </div>
+                        <div class="header__text">
+                            &#60; html 5, css 3, scss, js, bootstrap, webpack /&#62;
+                        </div>
+                        <div class="header__arrow">
+                            <a href="#clider">
+                                <span></span>
+                                <span></span>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="clider" id="clider">
+                <div class="container">
+                    <div class="clider__title">
+                        <h3>Преимущества</h3>
+                    </div>
+                    <div class="clider__content">
+                        <button class="btn-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="clider__content-slides">
+                            <div class="clider__content-item clider__content-item_active" data-id="1">
+                                <img src="./img/Advantage-slide1.svg" alt="slide-1">
+                                <div class="clider__content-item-text">
+                                    Адаптивная верстка
+                                </div>   
+                            </div>
+                            <div class="clider__content-item" data-id="2">
+                                <img src="./img/Advantage-slide2.svg" alt="slide-2">
+                                <div class="clider__content-item-text">
+                                    Короткие сроки
+                                </div>  
+                            </div>
+                            <div class="clider__content-item" data-id="3">
+                                <img src="./img/Advantage-slide3.svg" alt="slide-3">
+                                <div class="clider__content-item-text">
+                                    Низкие цены
+                                </div>  
+                            </div>
+                        </div>
+                        <button class="btn-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="clider__navigation">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="footer__content">
+                        <div class="footer__link">
+                            <a target="_blank" href="https://vk.com/alekseystarten"><i class="fab fa-vk"></i></a>
+                            <a target="_blank" href="https://github.com/Starten99"><i class="fab fa-github"></i></a>
+                            <a target="_blank" href="#"><i class="fab fa-telegram"></i></a>
+                        </div>
+                        <div class="footer__rights">
+                            <p>© 2017-2020 Все права защищены, "Aleksey Zaravnyatnykh"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/f99e272651.js" crossorigin="anonymous"></script>
+<script src="bundle.js"></script></body>
+</html>
