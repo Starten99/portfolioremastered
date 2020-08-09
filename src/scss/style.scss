@@ -39,6 +39,13 @@ header{
             border: none;
             display: none;
             padding: 0 2em;
+            transition: 0.6s all;
+            &:hover{
+                color: $secondColor;
+            }
+            &:not(:hover){
+                transition: 0.6s all;
+            }
         }
         &__btn-bars-delete{
             display: none;
@@ -160,7 +167,7 @@ main{
         background: url(../img/background.jpg) 0 0/cover no-repeat fixed;
         position: relative;
         &__cover{
-            background: url(../img/pattern.png) #1c8ffa20;
+            background: url(../img/pattern.png) #128cff20;
             width: 100%;
             height: 100%;
             position: absolute;
