@@ -22,7 +22,7 @@ webpack_build:
     - master
   script:
     # gulp makedir "dist" in root directory with all prod files
-    - npm run build:gp
+    - npm run build
   # this files and directories will be available on the following stages
   artifacts:
     paths:
