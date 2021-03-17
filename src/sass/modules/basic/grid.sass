@@ -1,0 +1,229 @@
+
+
+@media(min-width: 1282px)
+	@for $size from 1 through 24
+		@for $number from 24 through 1
+		.grid-container
+			&--airEmpty
+				.col-XXL-#{$size}
+					width: calc((100% / 24 * #{$size} - #{$offsetEmpty} * 2))
+			&--airSmall
+				.col-XXL-#{$size}
+					width: calc((100% / 24 * #{$size} - #{$offsetSmall} * 2))
+			&--airMiddle
+				.col-XXL-#{$size}
+					width: calc((100% / 24 * #{$size} - #{$offsetMiddle} * 2))
+			&--airBig
+				.col-XXL-#{$size}
+					width: calc((100% / 24 * #{$size} - #{$offsetBig} * 2))
+@media(max-width: 1281px) and (min-width: 992px)
+	@for $size from 1 through 24
+		@for $number from 24 through 1
+			.grid-container
+				&--airEmpty
+					.col-XL-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetEmpty} * 2))
+				&--airSmall
+					.col-XL-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetSmall} * 2))
+				&--airMiddle
+					.col-XL-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetMiddle} * 2))
+				&--airBig
+					.col-XL-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetBig} * 2))
+@media(max-width: 991px) and (min-width: 769px)
+	@for $size from 1 through 24
+		@for $number from 24 through 1
+			.grid-container
+				&--airEmpty
+					.col-L-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetEmpty} * 2))
+				&--airSmall
+					.col-L-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetSmall} * 2))
+				&--airMiddle
+					.col-L-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetMiddle} * 2))
+				&--airBig
+					.col-L-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetBig} * 2))
+
+
+@media(max-width: 768px) and (min-width: 480px)
+	@for $size from 1 through 24
+		@for $number from 24 through 1
+			.grid-container
+				&--airEmpty
+					.col-M-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetEmpty} * 2))
+				&--airSmall
+					.col-M-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetSmall} * 2))
+				&--airMiddle
+					.col-M-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetMiddle} * 2))
+				&--airBig
+					.col-M-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetBig} * 2))
+
+
+@media(max-width: 480px)
+	@for $size from 1 through 24
+		@for $number from 24 through 1
+			.grid-container
+				&--airEmpty
+					.col-S-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetEmpty} * 2))
+				&--airSmall
+					.col-S-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetSmall} * 2))
+				&--airMiddle
+					.col-S-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetMiddle} * 2))
+				&--airBig
+					.col-S-#{$size}
+						width: calc((100% / 24 * #{$size} - #{$offsetBig} * 2))
+
+.grid-container
+	display: flex
+	flex-wrap: wrap
+	margin: 0 $offsetEmpty $offsetEmpty
+	&--airEmpty
+		display: flex
+		flex-wrap: wrap
+		[class*="col-"]
+			margin: 0 $offsetEmpty $offsetEmpty
+	&--airSmall
+		display: flex
+		flex-wrap: wrap
+		margin-left: calc(#{- $offsetSmall})
+		margin-right: calc(#{- $offsetSmall})
+		[class*="col-"]
+			margin: 0 $offsetSmall
+			margin-bottom: calc(#{$offsetSmall}*2)
+	&--airMiddle
+		display: flex
+		flex-wrap: wrap
+		margin-left: calc(#{- $offsetMiddle})
+		margin-right: calc(#{- $offsetMiddle})
+		[class*="col-"]
+			margin: 0 $offsetMiddle
+			margin-bottom: calc(#{$offsetMiddle}*2)
+	&--airBig
+		display: flex
+		flex-wrap: wrap
+		margin-left: calc(#{- $offsetBig})
+		margin-right: calc(#{- $offsetBig})
+		[class*="col-"]
+			margin: 0 $offsetBig
+			margin-bottom: calc(#{$offsetBig}*2)
+
+
+.grid-center-container
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	margin: 0 $offsetEmpty $offsetEmpty
+	&--airEmpty
+		display: flex
+		flex-wrap: wrap
+		[class*="col-"]
+			margin: 0 $offsetEmpty $offsetEmpty
+	&--airSmall
+		display: flex
+		flex-wrap: wrap
+		margin-left: calc(#{- $offsetSmall})
+		margin-right: calc(#{- $offsetSmall})
+		[class*="col-"]
+			margin: 0 $offsetSmall
+			margin-bottom: calc(#{$offsetSmall}*2)
+	&--airMiddle
+		display: flex
+		flex-wrap: wrap
+		margin-left: calc(#{- $offsetMiddle})
+		margin-right: calc(#{- $offsetMiddle})
+		[class*="col-"]
+			margin: 0 $offsetMiddle
+			margin-bottom: calc(#{$offsetMiddle}*2)
+	&--airBig
+		display: flex
+		flex-wrap: wrap
+		margin-left: calc(#{- $offsetBig})
+		margin-right: calc(#{- $offsetBig})
+		[class*="col-"]
+			margin: 0 $offsetBig
+			margin-bottom: calc(#{$offsetBig}*2)
+
+.grid-left-container
+	display: flex
+	justify-content: flex-start
+	flex-wrap: wrap
+	margin: 0 $offsetEmpty $offsetEmpty
+	&--airEmpty
+		display: flex
+		flex-wrap: wrap
+		[class*="col-"]
+			margin: 0 $offsetEmpty $offsetEmpty
+	&--airSmall
+		display: flex
+		flex-wrap: wrap
+		margin-left: calc(#{- $offsetSmall})
+		margin-right: calc(#{- $offsetSmall})
+		[class*="col-"]
+			margin: 0 $offsetSmall
+			margin-bottom: calc(#{$offsetSmall}*2)
+	&--airMiddle
+		display: flex
+		flex-wrap: wrap
+		margin-left: calc(#{- $offsetMiddle})
+		margin-right: calc(#{- $offsetMiddle})
+		[class*="col-"]
+			margin: 0 $offsetMiddle
+			margin-bottom: calc(#{$offsetMiddle}*2)
+	&--airBig
+		display: flex
+		flex-wrap: wrap
+		margin-left: calc(#{- $offsetBig})
+		margin-right: calc(#{- $offsetBig})
+		[class*="col-"]
+			margin: 0 $offsetBig
+			margin-bottom: calc(#{$offsetBig}*2)
+.grid-right-container
+	display: flex
+	justify-content: flex-end
+	flex-wrap: wrap	
+	margin: 0 $offsetEmpty $offsetEmpty
+	&--airEmpty
+		display: flex
+		flex-wrap: wrap
+		[class*="col-"]
+			margin: 0 $offsetEmpty $offsetEmpty
+	&--airSmall
+		display: flex
+		flex-wrap: wrap
+		margin-left: calc(#{- $offsetSmall})
+		margin-right: calc(#{- $offsetSmall})
+		[class*="col-"]
+			margin: 0 $offsetSmall
+			margin-bottom: calc(#{$offsetSmall}*2)
+	&--airMiddle
+		display: flex
+		flex-wrap: wrap
+		margin-left: calc(#{- $offsetMiddle})
+		margin-right: calc(#{- $offsetMiddle})
+		[class*="col-"]
+			margin: 0 $offsetMiddle
+			margin-bottom: calc(#{$offsetMiddle}*2)
+	&--airBig
+		display: flex
+		flex-wrap: wrap
+		margin-left: calc(#{- $offsetBig})
+		margin-right: calc(#{- $offsetBig})
+		[class*="col-"]
+			margin: 0 $offsetBig
+			margin-bottom: calc(#{$offsetBig}*2)
+
+
+
+

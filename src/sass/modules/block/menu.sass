@@ -1,0 +1,243 @@
+@mixin hover-supported
+		@media not all and (pointer: coarse) 
+				&:hover 
+						@content
+.main-menu
+	background-color: $mainColor
+
+header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 10
+	transition: all .7s ease
+	&.out
+		transform: translateY(-100%)
+.menu
+	width: 100%
+	height: auto
+	display: flex
+	justify-content: space-between
+	position: sticky
+	top: 0
+	&__header
+		display: flex
+		height: 100%
+		padding-top: 0.2rem
+		padding-bottom: 0.2rem
+		&-mobile
+			display: none
+	&__footer
+		&-mobile
+			display: none
+	&-btn__wrapper
+		background-color: transparent
+		border: none
+		display: none
+		transition: 0.6s all
+		color: $thirdColor
+		width: 100%
+		height: inherit
+		flex-grow: 1
+		justify-content: flex-end
+		align-items: center
+	&__btn-bars
+		background-color: transparent
+		border: none
+		display: none
+		transition: 0.6s all
+		color: $thirdColor
+		i
+			font-size: 20px
+		&:hover
+			color: $secondColor
+		&:not(:hover)
+			transition: 0.6s all
+		&_delete
+			display: none
+	&__logo
+		height: auto
+		display: flex
+		padding-top: 5px
+		padding-bottom: 5px
+		img
+			align-items: center
+			width: 200px
+			height: 100%
+	&__wrapper
+		display: flex
+		flex-wrap: nowrap
+		flex-grow: 1
+		justify-content: flex-end
+		z-index: 2
+	.menu__body-mobile
+		display: flex
+		flex-wrap: nowrap
+		flex-grow: 1
+		justify-content: flex-end
+		z-index: 2
+	&__list
+		display: flex
+		flex-wrap: nowrap
+		flex-grow: 1
+		justify-content: flex-end
+		z-index: 2
+	
+	&__item
+		display: block		
+		display: flex	 
+		list-style-type: none
+		align-items: center
+		a
+			padding: 0 1rem
+			height: 100%
+			display: flex
+			align-items: center
+			text-decoration: none			 
+			font-family: $font-text-reg
+			font-size: .9rem
+			letter-spacing: 1px
+			color: $thirdColor	
+			&:hover
+				color: $secondColor
+	&__close
+		width: 40%
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		position: fixed
+		top: 0
+		left: -40%
+		z-index: 2
+		transition: 0.6s all
+		background-color: rgba(0, 0, 0, 0.9)
+		cursor: pointer
+		border: none
+		&:hover i
+			transition: 0.8s
+			color: $secondColor	
+		&:not(:hover) i
+			transition: 0.8s
+		svg
+			max-width: 50px
+			height: auto	
+		img
+			max-width: 50px
+			
+		i
+			font-size: 5em
+			color: $thirdColor
+@media (max-width: 991px)
+	.menu
+		&__header
+			&-mobile
+				display: flex
+				height: $heightMenu
+		&__footer
+			&-mobile
+				display: flex
+				position: relative
+				&::after
+					content: ''
+					width: 60%
+					height: 2px
+					left: 50%
+					top: -2px
+					transform: translateX(-50%)
+					position: absolute
+					background-color: $thirdColor
+				.menu__footer
+					&__list
+						width: 100%
+						display: flex
+						justify-content: space-around
+						list-style-type: none
+						padding-top: 1rem
+						padding-bottom: 1rem
+					&__item
+						a
+							text-decoration: none
+							color: $thirdColor
+							transition: 0.6s all
+							@include hover-supported()
+								color: $mainColor
+							i
+								font-size: 1.5rem
+								
+		&__wrapper
+			display: flex
+			flex-direction: column 
+			justify-content: center
+			width: 60%
+			height: 100%
+			min-height: 100vh
+			position: fixed
+			top:0
+			background-color: $secondColor
+			right: -60%
+			transition: 0.6s all
+			flex-grow: 1
+			overflow: hidden
+			&_active
+				right: 0
+		.menu__body-mobile
+			flex-grow: 1
+			overflow: auto
+		&__list
+			flex-direction: column
+			justify-content: flex-start
+			align-items: center
+		&-btn__wrapper
+			width: 100%
+			height: inherit
+			display: flex
+			flex-grow: 1
+			justify-content: flex-end
+			align-items: center
+		&__btn-bars
+			display: block		
+		&__close
+			&_active
+				left: 0
+		&__logo
+			img
+				width: 200px
+
+		&__item
+			display: flex
+			justify-content: center
+			list-style-type: none
+			border-right: none
+			width: 100%
+			a
+				color: $thirdColor
+				justify-content: center
+				padding-right: 1rem
+				padding-left: 1rem
+				width: 100% 
+				text-align: center
+				line-height: 4
+				text-transform: uppercase
+				&:hover
+					background-color: $thirdColor
+					color: $mainColor
+@keyframes showmenu
+	0%
+		transform: translateX(0%) translateY(-100%)
+	100%
+		transform: translateX(0%) translateY(0)
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+	.menu
+		height: $heightMenu
+@media (max-width: 768px)
+	.menu
+		&__logo
+			img
+				width: 180px
+@media ( max-width: 480px)
+	.menu
+		&__logo
+			img
+				width: 150px

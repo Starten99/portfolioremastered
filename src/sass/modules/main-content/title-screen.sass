@@ -1,0 +1,653 @@
+
+
+.title-screen
+	height: calc(100vh - var(--defvhmenu, 1vh))
+	margin-top: var(--defvhmenu, 1vh)
+	background-image: url(../img/background2.jpg)
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+	background-attachment: fixed
+	position: relative
+	display: flex
+	overflow: hidden
+	min-height: calc(100vh - var(--defvhmenu, 1vh))
+	flex-direction: column
+	&::after
+		content: '',
+		background-image: url(../img/pattern2.png)
+		background-color: rgba(18, 41, 90, .6)
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+	&__block
+		width: 100%
+		height: auto
+		flex-grow: 1
+	&__wrapper
+		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+		position: relative
+	&__footer
+		width: 100%
+		height: auto
+		display: flex
+		flex-direction: column
+		align-items: center
+		z-index: 1
+	&__content
+		width: inherit
+		display: flex
+		flex-grow: 1
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	&__title
+		width: inherit
+		display: flex	
+		z-index: 1 
+		justify-content: center
+		text-align: center
+		margin-bottom: 10px
+		h1
+			font-size: 3.2rem
+			font-family: $font-title-bold
+			display: flex
+			flex-wrap: nowrap
+			white-space: nowrap
+			overflow: hidden
+			color: $thirdColor
+			letter-spacing: 2px
+			line-height: 1
+			text-align: center
+			width: 17.8ch
+			border-right: 4px solid $thirdColor
+			animation: kursor 0.75s step-end infinite, print-text 2.1s steps(21)
+	&__subtitle
+		width: inherit
+		text-align: center
+		z-index: 1 
+		h3
+			font-size: 1.6rem
+			font-family: $font-subtitle-bold
+			color: $secondColor
+			letter-spacing: 1px
+	&__text
+		width: inherit
+		z-index: 1 
+		font-size: 1rem
+		line-height: 2
+		font-family: $font-text-bold
+		color: $thirdColor
+		text-align: center
+	&__arrow
+		display: flex
+		height: 70px
+		z-index: 2
+		a
+			width: 100%
+			height: 100%
+			border: none
+			cursor: pointer
+			text-decoration: none
+			background-color: transparent
+			span 
+				display: block
+				width: 30px
+				height: 30px
+				border-bottom: 5px solid $thirdColor
+				border-right: 5px solid $thirdColor
+				transform: rotate(45deg)
+				margin: -20px 0
+				animation: arrow 2s infinite
+				&:nth-child(2)
+					animation-delay: -0.2s
+				.arrow-7 span:nth-child(3)
+					animation-delay: -0.4s
+
+.scrollDown, .scrollDown--thirdColor
+	width: 100%
+	height: auto
+	display: flex
+	flex-direction: column
+	align-items: center
+	z-index: 1
+	a
+		width: 80px
+		height: auto
+		line-height: .9
+		position: relative
+		.character::before
+			content: ''
+			position: absolute
+			background-image: url(../img/logo/mario.svg)
+			top: 0px
+			left: 0
+			width: 39px
+			height: 40px
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: contain
+			z-index: 1
+			transform: translateX(0%) translateY(-100%)
+		.character::after
+			content: ''
+			position: absolute
+			background-image: url(../img/swipedown.svg)
+			top: 0
+			left: 45%
+			width: 80px
+			height: 50px
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: contain
+			transform: translateX(-40%) translateY(-200%)
+			animation: arrow 2s infinite
+	img
+		z-index: 2
+		position: relative
+		width: 80px
+		margin-bottom: 2px
+.scrollDown
+	&__bg
+		width: 100%
+		height: 34px
+		background-image: url(../img/brick_texture.png)
+		z-index: 1
+		display: flex
+		justify-content: center
+.scrollDown--thirdColor
+	.scrollDown
+		&__bg
+			width: 100%
+			height: 34px
+			background-image: url(../img/brick_texture--thirdColor.png)
+			z-index: 1
+			display: flex
+			justify-content: center
+.scrollDown__up
+	position: absolute
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	z-index: 1
+	height: 40px
+	top: -30px
+	bottom: auto
+	opacity: 0
+	transform: translateX(0%) translateY(0%)
+	a
+		width: 80px
+		height: auto
+		line-height: .9
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			background-image: url(../img/logo/mario_jump.svg)
+			top: 0px
+			left: 0
+			width: 39px
+			height: 40px
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: contain
+			z-index: 1
+			transform: translateX(0%) translateY(-200%)
+		&::after
+			display: none
+.scrollDown__up_active
+	animation-name: dropdown
+	animation-duration: 2s
+	animation-fill-mode: none
+	animation-timing-function: linear
+.animatecharacter__active
+	.character::before
+		background-image: url(../img/logo/mario_jump.svg) !important
+		animation-name: mario-hide
+		animation-duration: 1s
+		animation-fill-mode: forwards
+	.character::after
+		display: none
+
+
+@keyframes arrow
+	0%
+		opacity: 0
+		transform: translateX(-40%) translateY(-200%)
+	50%
+		opacity: 1
+	100%
+		opacity: 0
+		transform: translateX(-40%) translateY(-150%)
+
+@keyframes kursor
+	0%
+		border-color: $thirdColor
+	50%
+		border-color: transparent
+	100%
+		border-color: $thirdColor
+
+
+@keyframes showmario
+	0%
+		opacity: 0
+		transform: translateX(0%)  translateY(-200%)
+	100%
+		opacity: 1
+		transform: translateX(0%)  translateY(0%)
+@keyframes dropdown
+	0%
+		top: -30px
+		opacity: 0
+		transform: translateX(0%) translateY(0%)
+	50%
+		top: -30px
+		opacity: 1
+		transform: translateX(0%) translateY(0%)
+	100%
+		top: 100%
+		opacity: 1
+		transform: translateX(0%) translateY(-200%)
+@keyframes print-text
+	from
+		width: 0
+@keyframes mario-hide
+	0%
+		z-index: 1
+		transform: translateX(0%) translateY(-100%)
+	50%
+		z-index: 1
+		transform: translateX(50%) translateY(-150%)
+	80%
+		z-index: 1
+		transform: translateX(50%) translateY(10%)
+	100%
+		z-index: 1
+		transform: translateX(50%) translateY(10%)
+@keyframes hide
+	from
+		opacity: 0
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)		
+	.scrollDown--thirdColor
+		transform: translateY(-100%)
+		img
+			height: 90px
+	.scrollDown, .scrollDown--thirdColor
+		a
+			.character
+				width: 70px
+	@keyframes dropdown
+		0%
+			top: -30px
+			opacity: 0
+			transform: translateX(0%) translateY(0%)
+		50%
+			top: -30px
+			opacity: 1
+			transform: translateX(0%) translateY(0%)
+		100%
+			top: 100%
+			opacity: 1
+			transform: translateX(0%) translateY(50%)
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and ( max-width: 768px)
+	.scrollDown, .scrollDown--thirdColor
+		a
+		img
+			height: 68px
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and ( max-width: 480px)
+	.scrollDown, .scrollDown--thirdColor
+		a
+		img
+			height: 57px
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and ( max-height: 530px)
+	.scrollDown, .scrollDown--thirdColor
+		a
+		img
+			width: 60px
+			height: 68px
+	@keyframes arrow 
+		0%
+			opacity: 0
+			transform: translateX(-40%) translateY(-200%)
+		50%
+			opacity: 1
+		100%
+			opacity: 0
+			transform: translateX(-40%) translateY(-150%)	
+		
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and ( max-height: 400px)
+	.scrollDown, .scrollDown--thirdColor
+		a
+		img
+			width: 50px
+			height: 57px
+	.scrollDown,.scrollDown--thirdColor
+		a
+			.character::before
+				content: ''
+				position: absolute
+				background-image: url(../img/logo/mario.svg)
+				top: 0px
+				left: 0
+				width: 25px
+				height: 26px
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: contain
+				z-index: 4
+				transform: translateX(70%) translateY(-100%)
+	@keyframes mario-hide
+		0%
+			z-index: 1
+			transform: translateX(70%) translateY(-100%)
+		50%
+			z-index: 1
+			transform: translateX(120%) translateY(-150%)
+		80%
+			z-index: 1
+			transform: translateX(120%) translateY(10%)
+		100%
+			z-index: 1
+			transform: translateX(120%) translateY(10%)
+@media ( max-height: 530px)
+	.title-screen
+		&__title	 
+			display: flex	 
+			h1
+				font-size: 2rem
+				width: 18.5ch
+				font-weight: 700
+				color: $thirdColor
+		&__subtitle
+			h3
+				font-size: 1rem
+				font-weight: 700
+	.scrollDown, .scrollDown--thirdColor
+		a
+			.character::before
+				content: ''
+				position: absolute
+				background-image: url(../img/logo/mario.svg)
+				top: 0px
+				left: 0
+				width: 28px
+				height: 29px
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: contain
+				z-index: 4
+				transform: translateX(0%) translateY(calc(-100% - 2px))
+			.character::after
+				content: ''
+				position: absolute
+				background-image: url(../img/swipedown.svg)
+				top: -100%
+				left: 45%
+				width: 70px
+				height: 50px
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: contain
+				transform: translateX(-40%) translateY(-200%)
+				animation: arrow 2s infinite
+		img
+			width: 60px
+	.scrollDown__up
+		a
+			&::before
+				content: ''
+				position: absolute
+				background-image: url(../img/logo/mario_jump.svg)
+				top: 0px
+				left: 0
+				width: 30px
+				height: 31px
+				transform: translateX(0%) translateY(-240%)
+			&::after
+				display: none
+	@keyframes arrow 
+		0%
+			opacity: 0
+			transform: translateX(-40%) translateY(-200%)
+		50%
+			opacity: 1
+		100%
+			opacity: 0
+			transform: translateX(-40%) translateY(-150%)
+@media ( max-width: 768px)
+	.title-screen
+		&__title	 
+			display: flex	 
+			h1
+				font-size: 2rem
+				width: 18.5ch
+				font-weight: 700
+				color: $thirdColor
+		&__subtitle
+			h3
+				font-size: 1rem
+				font-weight: 700
+	.scrollDown, .scrollDown--thirdColor
+		a
+			.character::before
+				content: ''
+				position: absolute
+				background-image: url(../img/logo/mario.svg)
+				top: 0px
+				left: 0
+				width: 28px
+				height: 29px
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: contain
+				z-index: 4
+				transform: translateX(0%) translateY(calc(-100% - 2px))
+			.character::after
+				content: ''
+				position: absolute
+				background-image: url(../img/swipedown.svg)
+				top: -100%
+				left: 45%
+				width: 70px
+				height: 50px
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: contain
+				transform: translateX(-40%) translateY(-200%)
+				animation: arrow 2s infinite
+		img
+			width: 60px
+	.scrollDown__up
+		a
+			&::before
+				content: ''
+				position: absolute
+				background-image: url(../img/logo/mario_jump.svg)
+				top: 0px
+				left: 0
+				width: 30px
+				height: 31px
+				transform: translateX(0%) translateY(-240%)
+			&::after
+				display: none
+	@keyframes arrow 
+		0%
+			opacity: 0
+			transform: translateX(-40%) translateY(-200%)
+		50%
+			opacity: 1
+		100%
+			opacity: 0
+			transform: translateX(-40%) translateY(-150%)
+@media ( max-height: 400px)
+	.title-screen
+		&__content
+			padding-bottom: 1.5rem
+		&__title	 
+			display: flex
+			margin-bottom: .4rem
+			h1
+				font-size: 1.5rem
+				width: 18.2ch
+				font-weight: 700
+				color: $thirdColor
+				letter-spacing: 1px
+		&__subtitle
+			h3
+				font-size: .8rem
+				font-weight: 700 
+		&__text
+			font-size: .8rem
+	.scrollDown,.scrollDown--thirdColor
+		a
+			.character::before
+				content: ''
+				position: absolute
+				background-image: url(../img/logo/mario.svg)
+				top: 0px
+				left: 0
+				width: 25px
+				height: 26px
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: contain
+				z-index: 4
+				transform: translateX(40%) translateY(calc(-100% - 2px))
+			.character::after
+				content: ''
+				position: absolute
+				background-image: url(../img/swipedown.svg)
+				top: -90%
+				left: 45%
+				width: 60px
+				height: 50px
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: contain
+				transform: translateX(-40%) translateY(-150%)
+				animation: arrow 2s infinite
+		img
+			width: 50px
+	.scrollDown__up
+		a
+			&::before
+				content: ''
+				position: absolute
+				background-image: url(../img/logo/mario_jump.svg)
+				top: 0px
+				left: 0
+				width: 25px
+				height: 26px
+				transform: translateX(0%) translateY(-250%)
+			&::after
+				display: none
+	@keyframes arrow 
+		0%
+			opacity: 0
+			transform: translateX(-40%) translateY(-150%)
+		50%
+			opacity: 1
+		100%
+			opacity: 0
+			transform: translateX(-40%) translateY(-120%)
+	@keyframes mario-hide
+		0%
+			z-index: 1
+			transform: translateX(40%) translateY(-100%)
+		50%
+			z-index: 1
+			transform: translateX(90%) translateY(-150%)
+		80%
+			z-index: 1
+			transform: translateX(90%) translateY(10%)
+		100%
+			z-index: 1
+			transform: translateX(90%) translateY(10%)
+@media ( max-width: 480px)
+	.title-screen
+		&__title	 
+			display: flex	 
+			h1
+				font-size: 1.8rem
+				width: 18.2ch
+				font-weight: 700
+				color: $thirdColor
+				letter-spacing: 1px
+		&__subtitle
+			h3
+				font-size: 1.4rem
+				font-weight: 700 
+		&__text
+			font-size: 1.2rem
+	.scrollDown,.scrollDown--thirdColor
+		a
+			.character::before
+				content: ''
+				position: absolute
+				background-image: url(../img/logo/mario.svg)
+				top: 0px
+				left: 0
+				width: 25px
+				height: 26px
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: contain
+				z-index: 4
+				transform: translateX(0%) translateY(calc(-100% - 2px))
+			.character::after
+				content: ''
+				position: absolute
+				background-image: url(../img/swipedown.svg)
+				top: -100%
+				left: 45%
+				width: 60px
+				height: 50px
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: contain
+				transform: translateX(-40%) translateY(-180%)
+				animation: arrow 2s infinite
+			img
+				width: 50px
+	.scrollDown__up
+		a
+			&::before
+				content: ''
+				position: absolute
+				background-image: url(../img/logo/mario_jump.svg)
+				top: 0px
+				left: 0
+				width: 25px
+				height: 26px
+				transform: translateX(0%) translateY(-250%)
+			&::after
+				display: none
+	@keyframes arrow 
+		0%
+			opacity: 0
+			transform: translateX(-40%) translateY(-180%)
+		50%
+			opacity: 1
+		100%
+			opacity: 0
+			transform: translateX(-40%) translateY(-130%)
+		
+
+		
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+	.title-screen
+		height: calc(100vh - #{$heightMenu})
+		margin-top: #{$heightMenu}
+		&__title	 
+			h1
+				background-color: transparent
+				width: 22.35ch

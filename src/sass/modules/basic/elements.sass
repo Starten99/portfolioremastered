@@ -1,0 +1,248 @@
+* 
+	outline: none
+
+html, body, :root 
+	margin: 0px
+	padding: 0px
+	font-size: 20px
+	box-sizing: border-box
+
+*, *:before, *:after
+	box-sizing: inherit
+
+body
+	overflow-x: hidden
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+
+main
+	width: 100%	
+	height: 100%
+	flex-grow: 1
+	overflow: hidden
+	display: flex
+	flex-direction: column
+button
+	padding: 0
+
+h1,h2,h3,h4
+	margin: 0
+
+ul,li
+	margin: 0
+	padding: 0
+
+@media ( max-width: 1024px ) and (min-width: 769px)
+	html, body, :root 
+		font-size: 19px
+
+@media ( max-width: 768px ) and (min-width: 481px)
+	html, body, :root 
+		font-size: 18px
+
+@media ( max-width: 480px )
+	html, body, :root 
+		font-size: 14px
+
+.title, .title--secondColor
+	display: flex
+	justify-content: center
+	position: relative
+	h3
+		font-size: 2rem
+		font-family: $font-title-bold
+		color: $mainColor
+		letter-spacing: 1px
+		position: relative
+		padding-bottom: 5px
+		margin-bottom: 50px
+		&:after
+			content: ' '
+			position: absolute
+			width: 50%
+			height: 4px
+			bottom: -7px
+			left: 50%
+			transform: translateX(-50%)
+			background-color: $secondColor
+.title--secondColor
+	h3
+		color: $secondColor
+		&:after
+			content: ' '
+			position: absolute
+			width: 50%
+			height: 4px
+			bottom: -7px
+			left: 50%
+			transform: translateX(-50%)
+			background-color: $thirdColor
+section.section
+	&__wrapper
+		padding-top: 2.5rem
+
+	&--first
+		padding-top: 2.5rem
+
+.main-title
+	&--center
+		display: flex
+		justify-content: center
+
+.info__text, .info__text--secondColor
+	font-family: $font-text-reg
+	font-size: 1.2rem
+	p
+		margin-top: 0
+		margin-bottom: 20px
+		&:last-child
+			margin: 0
+.info__text--secondColor
+	color: $secondColor
+.verticalPosition--center
+	display: flex
+	align-items: center
+.content
+	display: flex
+	flex-direction: column
+	overflow: hidden
+	min-height: 100vh
+.wrapper-content
+	width: 100%
+	height: auto
+	flex-grow: 1	
+	display: flex
+	flex-direction: column
+.container
+	width: 100%
+	height: inherit
+	margin: 0 auto
+	padding-left: 50px
+	padding-right: 50px
+	&__content
+		width: 100%
+		max-width: 1600px
+		height: inherit
+		margin: 0 auto
+		padding-left: 50px
+		padding-right: 50px	
+	&-body
+		width: 100%
+		height: 100%
+		flex-grow: 1
+		display: flex
+		flex-direction: column
+
+
+.hide
+	animation: hide
+	animation-duration: 2s
+	box-sizing: border-box
+	animation-fill-mode: forwards
+	visibility: hidden
+	font-size: 0
+	width: 0
+	height: 0
+	max-width: 0
+	margin: 0
+	padding: 0
+	
+.animate
+	transition: 1s linear
+	transform: scale(0)
+	opacity: 0
+	display: none
+
+.product
+	transition: 0.5s all
+.show
+	animation: show
+	animation-duration: 2s
+	animation-fill-mode: forwards
+	transform: scale(1)
+	opacity: 1
+@keyframes hide
+	from
+		visibility: visible
+	to
+		visibility: hidden
+		font-size: 0
+		width: 0
+		height: 0
+		max-width: 0
+		margin: 0
+		padding: 0
+
+@keyframes show
+	from
+		visibility: hidden
+	to
+		visibility: visible
+
+
+
+.main-btn
+	border: none
+	box-sizing: border-box
+	background-color: rgba(255,255,255, 0.6)
+	box-shadow: 0px 0px 2px 5px rgba(255,255,255, 0.6)
+	text-transform: uppercase
+	font-family: $font-text-bold
+	color: $secondColor
+	cursor: pointer
+	letter-spacing: 1px
+	padding: 10px
+
+.back-btn
+	border: none
+	font-family: $font-text-bold
+	cursor: pointer
+	background-color: transparent
+	svg
+		width: 20px
+		height: 20px
+	span
+		margin-left: 10px
+		text-transform: uppercase
+		color: $mainColor
+		font-family: $font-text-bold
+		font-weight: 700
+		font-size: 15px
+.cls-1
+	fill: $mainColor
+.moreDetailSVG
+	fill: $thirdColor
+.font-bold
+	font-family: $font-text-bold
+
+.testslider
+	width: 100%
+	height: 100%
+	display: flex
+	flex-grow: 1
+	align-items: center
+	padding-bottom: 2.5rem
+//@media
+
+
+@media ( max-width: 1024px )
+
+
+@media ( max-width: 768px )
+
+	.container
+		padding-left: 34px
+		padding-right: 34px
+	.container__content
+		padding-left: 34px
+		padding-right: 34px
+
+@media ( max-width: 480px )
+
+	.container
+		padding-left: 15px
+		padding-right: 15px
+	.container__content
+		padding-left: 15px
+		padding-right: 15px

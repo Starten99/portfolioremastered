@@ -1,9 +1,10 @@
 export class Component{
-    constructor(id){
-        this.$el=document.getElementById(id)
-        this.init()
-    }
-    init(){
-        
-    }
+	constructor(id, parameters){
+		this.$el=document.getElementById(id)
+		this.parameters = parameters
+		this.init()
+	}
+	init(){
+		
+	}
 }

@@ -1,0 +1,43 @@
+# docker image
+image: node:12
+
+# cash files
+cache:
+  paths:
+    - node_modules/
+
+# before jobs
+before_script:
+  - npm install
+
+# execution order jobs
+stages:
+  - build
+  - deploy
+
+# build app
+webpack_build:
+  stage: build
+  only:
+    - master
+  script:
+    # gulp makedir "dist" in root directory with all prod files
+    - npm run build:gp
+  # this files and directories will be available on the following stages
+  artifacts:
+    paths:
+      - dist
+
+
+# deploy app
+pages:
+  stage: deploy
+  script:
+    - mkdir -p ./public
+    - mv -v ./dist/* ./public
+  only:
+    - master
+  # this files and directories will be available on the following stages
+  artifacts:
+    paths:
+      - public
