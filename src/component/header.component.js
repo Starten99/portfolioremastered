@@ -62,11 +62,13 @@ const scrollIntoLocation =(event, menuList, btnBars, btnClose, body)=>{
 	const blockID = link.getAttribute('href').substr(1)
 	const menuListActive = document.querySelector(`.${menuList.classList[0]}_active`)
 	const btnCloseActive = document.querySelector(`.${btnClose.classList[0]}_active`)
-	document.getElementById(blockID).scrollIntoView({
-		behavior: 'smooth',
-		block: 'start'
-	})
-
+	if(document.getElementById(blockID)){
+		event.preventDefault()
+		document.getElementById(blockID).scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		})
+	}
 	if(menuListActive || btnCloseActive){
 		menuList.classList.remove(menuList.classList[0]+'_active')
 		btnClose.classList.remove(btnClose.classList[0]+'_active')

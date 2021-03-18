@@ -20,22 +20,24 @@ export class SmoothScrollingComponent extends Component{
 		
 		anchors.forEach((anchor) => {
 			anchor.addEventListener('click', function (e) {
-				e.preventDefault()
-				this.classList.add('animatecharacter__active')
-				const blockID = anchor.getAttribute('href').substr(1)
-				const scrollIntoLocation =()=>{
-					document.getElementById(blockID).scrollIntoView({
-						behavior: 'smooth',
-						block: 'start'
-					})
-				}
 				if(e.target.classList.contains('character')){
-					if(animatecharacter || animatecharacter > 0){
-						setTimeout(scrollIntoLocation, 1000)
-						const id = this.parentElement.dataset.id
-						const nextID = parseInt(id) + 1 
-						setTimeout(()=>{animateCharacter(id, scrollDownUp)}, 500)
-						setTimeout(()=>{showCharacter(nextID, scrollDown)}, 2500)
+					e.preventDefault()
+					this.classList.add('animatecharacter__active')
+					const blockID = anchor.getAttribute('href').substr(1)
+					const scrollIntoLocation =()=>{
+						document.getElementById(blockID).scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						})
+					}
+					if(e.target.classList.contains('character')){
+						if(animatecharacter || animatecharacter > 0){
+							setTimeout(scrollIntoLocation, 1000)
+							const id = this.parentElement.dataset.id
+							const nextID = parseInt(id) + 1 
+							setTimeout(()=>{animateCharacter(id, scrollDownUp)}, 500)
+							setTimeout(()=>{showCharacter(nextID, scrollDown)}, 2500)
+						}
 					}
 				}
 			})
