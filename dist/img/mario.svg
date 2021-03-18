@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2019 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="38.9mm" height="40.1mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 3890 4010"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil2 {fill:black}
+    .fil3 {fill:#34DEC4}
+    .fil0 {fill:white}
+    .fil1 {fill:white}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2444417263344">
+   <path class="fil0" d="M1685.56 1457.21l0 7.17 0 244.18 1440.11 0 0 -244.18 276.19 0 0 -236.98 219.13 0 0 -251.35 -204.67 0 0 -236.98 -301.73 0 0 -246.45 -1429.03 0c0,160.42 0,323.05 0,483.43l-256.82 0 0 251.35 256.82 0 0 229.81z"/>
+   <rect class="fil1" x="2082.83" y="1663.27" width="811.47" height="411.51"/>
+   <rect class="fil2" x="2651.36" y="494.9" width="233.37" height="481.12"/>
+   <path class="fil3" d="M1875.81 976.05l0 -481.13 1535.43 0 0 -251.35 -287.22 0 0 -236.98 -1438.46 0 0 236.98 -272.89 0c0,172.54 1.74,340.73 1.74,513.35l-219.05 0 0 470.52 233.38 0 0 -251.39c149.04,0 298.03,0 447.07,0z"/>
+   <polygon class="fil3" points="2632.17,2534.4 2632.17,3526.83 3385.84,3526.83 3385.84,2534.4 3878.12,2534.4 3878.12,2283.05 3641.14,2283.05 3641.14,2046.03 1271.36,2046.03 1271.36,2283.05 910.01,2283.05 910.01,2534.4 1389.83,2534.4 1389.83,3526.83 2140.28,3526.83 2140.28,2534.4 "/>
+   <path class="fil3" d="M3878.12 3755.25l-240.58 0 0 -237.02 -743.25 0 0 237.02 0 14.33 0 237.02 983.83 0 0 -251.35zm-2732.48 -237.02l743.24 0 0 237.02 0 14.33 0 237.02 -983.82 0 0 -251.35 240.58 0 0 -237.02z"/>
+   <rect class="fil3" x="1759.95" y="2453.06" width="1268.22" height="797.13"/>
+   <rect class="fil1" x="3152.85" y="2786.06" width="725.26" height="251.35"/>
+   <rect class="fil1" x="2632.19" y="2534.38" width="258.52" height="227.6"/>
+   <rect class="fil1" x="3382.62" y="2534.38" width="495.5" height="723.09"/>
+   <rect class="fil2" transform="matrix(-1.15202E-13 -4.34264 -4.34264 1.15202E-13 2875.56 1463.42)" width="53.74" height="110.79"/>
+   <rect class="fil2" transform="matrix(-5.75968E-14 -4.34264 -2.17117 1.15202E-13 2425.48 1249.65)" width="53.74" height="110.79"/>
+   <polygon class="fil3" points="1961.6,2353.62 1961.6,2046.06 730.95,2046.06 730.95,2345.35 507.38,2345.35 507.38,2649.31 224.05,2649.31 224.05,2949.89 7.21,2949.89 7.21,3257.48 1975.85,3257.48 1975.85,2949.89 1854,2949.89 1854,2652.91 1949.59,2652.91 1949.59,2353.62 "/>
+   <g>
+    <rect class="fil1" x="894.33" y="2534.38" width="495.5" height="723.88"/>
+    <rect class="fil1" x="894.33" y="2786.33" width="725.26" height="251.63"/>
+   </g>
+   <rect class="fil1" x="1888.91" y="2534.38" width="258.52" height="227.6"/>
+  </g>
+ </g>
+</svg>
